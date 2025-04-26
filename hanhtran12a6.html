@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Hobbies My Life</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color:#EEE8CD; color: #333; margin: 0; padding: 0; }
+    header { background-color:#CDC5BF; padding: 20px; text-align: center; color: brown; }
+    nav ul { list-style-type: none; padding: 0; margin: 0; text-align: center; }
+    nav ul li { display: inline; margin: 0 15px; }
+    nav ul li a { color: brown; text-decoration: none; font-weight: bold; cursor: pointer; }
+    main { padding: 20px; text-align: center; }
+    
+    /* Thêm khung cho các mục */
+    .section {
+      border: 2px solid #CDC5BF; /* Đặt màu viền cho khung */
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      display: none;
+    }
+
+    .active { display: block; }
+    
+    .gallery { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
+    .gallery img { border: 2px solid #6FA3EF; border-radius: 10px; width: 300px; height: 350px; }
+    footer { background-color: #8B658B; color: white; text-align: center; padding: 10px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JUST ABOUT MYSELF</h1>
+    <nav>
+      <ul>
+        <li><a onclick="showSection('home')">HOME</a></li>
+        <li><a onclick="showSection('music')">MUSIC</a></li>
+        <li><a onclick="showSection('story')">STORY</a></li>
+        <li><a onclick="showSection('movies')">MOVIES</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div id="home" class="section active">
+      <h2>Something about my hobbies!</h2>
+      <p>This is the "HOME" that links to other pages (just one "click" will take you to another page)</p>
+      <div class="gallery">
+        <img src="https://i.pinimg.com/474x/ae/f9/f7/aef9f76047b7ac391e54358a0d7720df.jpg" alt="Ảnh âm nhạc">
+        <img src="https://i.pinimg.com/474x/a9/a6/f3/a9a6f3c554d9fc2114217cdcdffb65f0.jpg" alt="Ảnh truyện">
+        <img src="https://i.pinimg.com/736x/b2/51/fd/b251fdf3738260dc76090608dcd16fdd.jpg" alt="Ảnh phim">
+      </div>
+    </div>
+
+     <div id="music" class="section">
+      <h2>MY FAVORITE SONGS</h2>
+      <h3>Cần Gì Hơn - Tiên tiên</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/w0m3KQJVH3g" allowfullscreen></iframe>
+
+      <h3>Gook Luck, Babe - Champpell Roan</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/VZ-oGLluGAc" allowfullscreen></iframe>
+
+      <h3>Like Him - Tyler, The Creator.Lola Young</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/dgUHE8wWhiE" allowfullscreen></iframe>
+
+      <h3>David Guetta, Cedric Gervais, Chris Willis - Would I Lie To</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/u0pmV7GoTjc" allowfullscreen></iframe>
+
+      <h3>All The Stars - Kendrick Lamar · SZA</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/vdXsLt0o_9g" allowfullscreen></iframe>
+    </div>
+
+    <div id="story" class="section">
+      <h2>Danh sách truyện yêu thích</h2>
+      <ul>
+        <li><a href="https://www.goodreads.com/book/show/32620332-the-seven-husbands-of-evelyn-hugo" target="_blank">📖 The Seven Husbands of Evelyn Hugo</a></li>
+        <li><a href="https://narutowiki.net/manga/boruto/" target="_blank">📖 BORUTO</a></li>
+        <li><a href="https://truyenqqto.com/truyen-tranh/dai-chien-nguoi-khong-lo-462" target="_blank">📖 Đại Chiến Người Khổng Lồ</a></li>
+        <li><a href="https://nettruyenvie.com/truyen-tranh/jujutsu-kaisen-chu-thuat-hoi-chien" target="_blank">📖 Jujutsu Kaisen - Chú Thuật Hồi Chiến</a></li>
+      </ul>
+    </div>
+
+    <div id="movies" class="section">
+      <h2>Danh sách phim yêu thích</h2>
+      <ul>
+        <li><a href="https://motchiill.tv/phim/ban-ban-be-be-2025" target="_blank">🎬 Bạn Bạn Bè Bè</a></li>
+        <li><a href="https://motchilltv.fm/phim/nu-hoang-nuoc-mat" target="_blank">🎬 Nữ Hoàng Nước Mắt</a></li>
+        <li><a href="https://subnhanhtv.fit/phim/tang-ban-mot-doa-hoa-nho-mau-do/" target="_blank">🎬 Tặng Bạn Một Đoá Hoa Nhỏ Màu Đỏ</a></li>
+        <li><a href="https://vn.phim.city/phim/lang-lang-phan-1-10032/" target="_blank">🎬 Lâng Lâng Phần 1</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>Liên hệ: trannguyentrantran6107@gmail.com | SĐT: 0817xxxxx</p>
+  </footer>
+
+  <script>
+    function showSection(sectionId) {
+      // Hide all sections
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.classList.remove('active'));
+
+      // Show the selected section
+      const activeSection = document.getElementById(sectionId);
+      activeSection.classList.add('active');
+    }
+  </script>
+</body>
+</html>
